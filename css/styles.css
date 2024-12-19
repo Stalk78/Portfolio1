@@ -349,8 +349,12 @@ canvas {
   cursor: url('/images/cursor.png'), auto;
 }
 
-.cvpdf{
 
-padding-left: 350px;
-
+.cvpdf {
+margin-top: 2%;
+margin-left: 35%;
+  -webkit-box-shadow:0px 0px 36px 0px rgba(227,232,231,0.42);
+  -moz-box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+  box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+  overflow: hidden;
 }
