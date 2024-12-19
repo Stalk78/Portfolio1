@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: monospace;
+  background-color: #1e1e1e; /* Couleur de fond */
+  color: #ffffff; /* Couleur du texte */
+}
+
+.code-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.code-lines {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: scrollCode 700s steps(1500) infinite; /* Ajustez la durée ici pour changer la vitesse */
+}
+
+@keyframes scrollCode {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.code-lines pre {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}

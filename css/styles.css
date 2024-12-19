@@ -1,0 +1,351 @@
+body {
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  color: white;
+  height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  cursor: url('/images/cursor.png'), auto;
+}
+
+.presentation-page {
+ background-color: black;
+}
+
+.onglet {
+  cursor: url('/images/cursor.png'), auto;
+}
+
+.img_linkdn {
+  cursor: url('/images/cursor.png'), auto;
+}
+
+canvas {
+  display: block;
+  position: fixed; /* Fixed position to stay in the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send canvas to the background */
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position: relative; /* Ensure content is above canvas */
+  z-index: 1;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgba(255, 255, 255, 0.603);
+  color: black;
+  -webkit-box-shadow:0px 0px 36px 0px rgba(227,232,231,0.42);
+  -moz-box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+  box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+  cursor: url('/images/cursor.png'), auto;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #474747;
+  color: white;
+  cursor: url('/images/cursor.png'), auto;
+}
+
+.topnav a.activeb {
+  background-color: hsl(0, 0%, 45%);
+  color: rgb(36, 36, 36);
+  cursor: url('/images/cursor.png'), auto;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/* Responsive: vertical layout for small screens */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #22505200;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+  flex-direction: column; /* Added for vertical alignment */
+  position: relative; /* Ensure content is above canvas */
+  z-index: 2; /* Increase z-index to be above canvas */
+}
+
+.full_presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #22505200;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+  flex-direction: column; /* Added for vertical alignment */
+  position: relative; /* Ensure content is above canvas */
+  z-index: 2; /* Increase z-index to be above canvas */
+}
+
+.tete {
+  border-radius: 100px;
+  width: 200px;
+  margin-bottom: 25px; /* Adds some space below the image */
+}
+
+.tete_pre {
+  border-radius: 100px;
+  width: 200px;
+  margin-right: 25px; /* Espace entre l'image et le texte */
+}
+
+.portfolio-title {
+  margin: 20px 0 10px;
+  font-size: 36px;
+  color: #fff;
+}
+
+
+
+.carre {
+  background-color: #2c2c2cef;
+  padding: 115px 5px 40px 5px; /* Ajustez les valeurs de padding pour mieux envelopper le contenu */
+  border-radius: 15px;
+  display: inline-block; /* S'adapte à la taille du contenu */
+  margin-top: -100px; /* Ajustez cette valeur pour placer le carré correctement */
+  width: 400px; /* Définissez une largeur fixe pour le carré */
+  white-space: nowrap; /* Empêche le texte de s'étendre sur plusieurs lignes */
+  
+}
+
+.carre_presentation {
+  background-color: #2c2c2cef;
+  padding: 5% 5% 5% 5%; /* Ajustez les valeurs de padding pour agrandir le rectangle */
+  border-radius: 15px;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align items to the left */
+  margin-top: -100px; /* Ajustez cette valeur pour placer le carré correctement */
+  width: 80%; /* Définissez une largeur plus grande pour le rectangle */
+  min-height: 60vh; /* Ajoutez une hauteur minimale pour le rectangle */
+  white-space: nowrap; /* Empêche le texte de s'étendre sur plusieurs lignes */
+  -webkit-box-shadow:0px 0px 36px 0px rgba(227,232,231,0.42);
+  -moz-box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+  box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  cursor: url('/images/cursor.png'), auto;
+  align-items: center;
+  margin-top: -50px; /* Ajustez cette valeur pour déplacer le contenu vers le haut ou le bas */
+}
+
+.center-content_presentation {
+  align-items: center; /* Centre verticalement si besoin */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px; /* Ajustez cette valeur pour déplacer le contenu vers le haut ou le bas */
+}
+
+.typewrite {
+  color: #fff; /* Couleur blanche */
+  text-decoration: none; /* Pas de soulignement */
+}
+
+.typewrite .wrap {
+  color: #ddd; /* Couleur blanche pour le texte */
+  text-decoration: none; /* Pas de soulignement */
+  cursor: url('/images/cursor.png'), auto;
+}
+
+.div_tete {
+  margin-left: 10px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+}
+
+.vl {
+  border-left: 6px solid white;
+  height: 500px;
+  position: absolute;
+  left: 35%;
+  margin-top: 15%;
+  margin-left: -3px;
+  top: 0;
+  border-radius: 10px;
+  
+}
+.vl_presentation {
+  border-left: 6px solid white;
+  height: 500px;
+  position: absolute;
+  left: 35%;
+  margin-top: 5%;
+  margin-left: 120px;
+  top: 0;
+  border-radius: 10px;
+  
+}
+
+
+.v2 {
+  border-left: 6px solid white;
+  height: 67%;
+  position: absolute;
+  left: 10%;
+  margin-top: 6%;
+  margin-left: -3px;
+  top: 0;
+  border-radius: 10px;
+  
+}
+
+.v3 {
+  border-left: 6px solid white;
+  height: 67%;
+  position: absolute;
+  left: 60%;
+  margin-top: 6%;
+  margin-left: -3px;
+  top: 0;
+  border-radius: 10px;
+  
+}
+
+
+.portfolio-subtitle {
+  font-size: 24px;
+  color: #ddd;
+  cursor: url('/images/cursor.png'), auto;
+  margin-left: auto;
+}
+.portfolio-subtitle_presentation {
+
+  font-size: 24px;
+  color: #ddd;
+  cursor: url('/images/cursor.png'), auto;
+  margin-left: 15%;
+
+}
+.expericence {
+  font-size: 40px;
+  color: white;
+  cursor: url('/images/cursor.png'), auto;
+  margin-left: 20%;
+  
+}
+
+
+.body_veille {
+
+  overflow: visible ; 
+}
+
+.carre_veille {
+  background-color: #2c2c2cef;
+  padding: 25% 5% 25% 5%; /* Ajustez les valeurs de padding pour agrandir le rectangle */
+  border-radius: 15px;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align items to the left */
+  margin-top: 40%; /* Ajustez cette valeur pour placer le carré correctement */
+  width: 80%; /* Définissez une largeur plus grande pour le rectangle */
+  min-height: 60vh; /* Ajoutez une hauteur minimale pour le rectangle */
+  white-space: nowrap; /* Empêche le texte de s'étendre sur plusieurs lignes */
+  -webkit-box-shadow:0px 0px 36px 0px rgba(227,232,231,0.42);
+  -moz-box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+  box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+  margin-bottom: 10px;
+}
+
+
+
+.center-content_veille {
+  margin: 20px 0 10px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.vl_e4 {
+  border-left: 6px solid white;
+  height: 500px;
+  position: absolute;
+  left: 40%;
+  margin-top: 5%;
+  margin-left: 120px;
+  top: 0;
+  border-radius: 10px;
+  
+}
+
+.carre_e4 {
+  background-color: #2c2c2cef;
+  padding: 5% 5% 5% 5%; /* Ajustez les valeurs de padding pour agrandir le rectangle */
+  border-radius: 15px;
+  margin-top: 5% !important;
+  margin-bottom: 8% !important;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align items to the left */
+  margin-top: -100px; /* Ajustez cette valeur pour placer le carré correctement */
+  width: 80%; /* Définissez une largeur plus grande pour le rectangle */
+  min-height: 60vh; /* Ajoutez une hauteur minimale pour le rectangle */
+  white-space: nowrap; /* Empêche le texte de s'étendre sur plusieurs lignes */
+  -webkit-box-shadow:0px 0px 36px 0px rgba(227,232,231,0.42);
+  -moz-box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+  box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+
+
+}
+
+.center-content_e4{
+ 
+}
+
+.custom-button {
+  background-color: #1c1b1b; /* Couleur de fond noire */
+  color: #fff; /* Couleur du texte blanche */
+  border: 2px solid #818181; /* Bordure blanche */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 10px 20px; /* Espacement interne */
+  font-size: 16px; /* Taille du texte */
+  cursor: pointer; /* Curseur de la souris */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transition pour les effets */
+  cursor: url('/images/cursor.png'), auto;
+}
+
+.custom-button:hover {
+  background-color: #424446; /* Couleur de fond blanche au survol */
+  color: white; /* Couleur du texte noire au survol */
+  border: 2px solid #7a8184; /* Bordure noire au survol */
+  cursor: url('/images/cursor.png'), auto;
+}
+

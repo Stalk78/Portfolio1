@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="margin: 0;"></body>
+  <div class="topnav">
+    <a class="active" href="#">Léo LE CORRE </a>
+    <div class="topnav-right">
+      <a class="onglet" href="/html/Presentation.html">Présentation</a>
+      <a class="onglet" href="/html/CV.html">CV</a>
+      <a class="onglet" href="/html/Competences.html">Compétences</a>
+      <a class="onglet" href="/html/E4.html">E4</a>
+      <a class="onglet" href="/html/E5.html">E5</a>
+    </div>
+  </div>
+
+  <div class="full">
+   <div class="carre">
+    <div class="center-content">
+      <img src="/images/1683830897921.jpg" class="tete">
+      <h1 class="portfolio-title">
+        <a href="" class="typewrite" data-period="2000" data-type='[ "Mon Portfolio" ]'>
+          <span class="wrap"></span>
+        </a>
+      </h1>
+      <h2 class="portfolio-subtitle">ICI</h2>
+    </div>
+    </div>
+  </div>
+
+
+  <script>
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  overflow: hidden;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/* Responsive: vertical layout for small screens */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #225052;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+  flex-direction: column; /* Added for vertical alignment */
+}
+
+.tete {
+  border-radius: 100px;
+  width: 200px;
+  margin-bottom: 25px; /* Adds some space below the image */
+}
+
+.portfolio-title {
+  margin: 20px 0 10px;
+  font-size: 36px;
+  color: #fff;
+}
+
+.portfolio-subtitle {
+  font-size: 24px;
+  color: #ddd;
+}
+
+.leolecorre {
+  font-size: 10px;
+}
+
+.prenom {
+  float: left;
+}
+
+.carre {
+  background-color: #04AA6D;
+  padding: 115px 5px 40px 5px; /* Ajustez les valeurs de padding pour mieux envelopper le contenu */
+  border-radius: 15px;
+  display: inline-block; /* S'adapte à la taille du contenu */
+  margin-top: -100px; /* Ajustez cette valeur pour placer le carré correctement */
+  width: 400px; /* Définissez une largeur fixe pour le carré */
+  white-space: nowrap; /* Empêche le texte de s'étendre sur plusieurs lignes */
+}
+
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px; /* Ajustez cette valeur pour déplacer le contenu vers le haut ou le bas */
+}
+
+
+
+.wrap {
+  color: #ddd;
+  text-decoration: none; /* Assurez-vous que ce soit en minuscules */
+}
+.typewrite {
+  color: #fff; /* Couleur blanche */
+  text-decoration: none; /* Pas de soulignement */
+}
+
+.typewrite .wrap {
+  color: #ddd; /* Couleur blanche pour le texte */
+  text-decoration: none; /* Pas de soulignement */
+}
