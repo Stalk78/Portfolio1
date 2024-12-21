@@ -21,15 +21,10 @@ body {
   cursor: url('/images/cursor.png'), auto;
 }
 
-.img_linkdn { cursor: url('/images/cursor.png'), auto; 
-  width: 30%;
-  height: 30%;
-
-}
-
 .typewrite { 
   color: #fff; /* Couleur blanche */ 
   text-decoration: none; /* Pas de soulignement */ 
+  font-size: 25px;
 }
 
 
@@ -264,6 +259,7 @@ canvas {
 
   .carre {
     width: 90%; /* Utilisez 90% de la largeur de l'écran */
+    height: 10px; !important
     padding: 20px; /* Ajustez le padding pour une meilleure adaptation */
   }
 
@@ -320,7 +316,17 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  cursor: url('/images/cursor.png'), auto;
 }
+
+/* Assurez-vous que l'image ne dépasse pas la largeur de la div */
+.img_linkdn img {
+  max-width: 150px; /* Définir une largeur maximale pour l'image */
+  height: auto; /* Maintenir les proportions */
+  margin-left: 00%;
+  margin-bottom: 10%;
+}
+
 
 @media screen and (max-width: 500px) {
   .topnav a {
@@ -330,6 +336,13 @@ body {
     padding: 10px;
   }
   
+
+  .blabla{
+    margin-left: 5%;
+    text-align: left;
+    margin-top: 10%;
+    }
+  
   .tete, .tete_pre {
     border-radius: 100px;
     max-width: 100px; /* Limiter la largeur maximale */ 
@@ -337,6 +350,22 @@ body {
     margin-top: 10%; /* Ajouter un espace en haut */
   }
   
+  .img_linkdn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: url('/images/cursor.png'), auto;
+  }
+  
+  /* Assurez-vous que l'image ne dépasse pas la largeur de la div */
+  .img_linkdn img {
+    max-width: 1500px; /* Définir une largeur maximale pour l'image */
+    height: auto; /* Maintenir les proportions */
+    margin-left: 00%;
+    margin-bottom: 20%;
+  }
+
   
   .topnav {
     padding: 5px;
@@ -369,7 +398,11 @@ body {
   z-index: 2; /* Increase z-index to be above canvas */
 }
 
+.div_tete{
+height: 200px;
+width: 200px;
 
+}
 
 .portfolio-subtitle {
   font-size: 24px;
@@ -381,15 +414,21 @@ body {
 .tete, .tete_pre {
   border-radius: 100px;
   width: 200px;
+  height: fit-content;
   margin-bottom: 25px; /* Adds some space below the image */
 }
 
+.blabla{
+margin-left: 5%;
+text-align: left;
+margin-top: 1%;
+}
 
 .portfolio-title {
   font-size: 36px;
 }
 
-.portfolio-subtitle, .portfolio-subtitle_presentation {
+.portfolio-subtitle_presentation {
   font-size: 24px;
   color: #ddd;
   margin-right: 600px;
