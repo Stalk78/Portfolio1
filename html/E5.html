@@ -3,34 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon PortFolio</title>
+  
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Mon PortFolio </title>
 </head>
+
 <body class="presentation-page" style="margin: 0;">
 
     </div>
   </div>
+
+
   <div class="topnav">
     <a class="active" href="/index.html">Léo LE CORRE</a>
-    <div class="topnav-right">
-      <a class="onglet" href="/html/Presentation.html">Présentation</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a> <!-- Hamburger icon -->
+    <div class="topnav-right" id="myTopnav">
+        <a class="onglet" href="/html/Presentation.html">Présentation</a>
         <a class="onglet" href="/html/CV.html">CV</a>
         <a class="onglet" href="/html/Competences.html">Compétences</a>
         <a class="onglet" href="/html/Veille_techno.html">Veille_Technologique</a>
         <a class="onglet" href="/html/E4.html">E4</a>
-        <a class="activerb" href="/html/E5.html">E5</a>
-        
+        <a class="onglet" href="/html/E5.html">E5</a>
+        <div class="dropdown-menu">
+            <a href="javascript:void(0);" class="dropbtn">More ▼</a>
+            <div class="dropdown-content">
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Skills</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+                <a href="#" class="highlight">Music Access</a>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+
+<script>
+function toggleMenu() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav-right") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav-right";
+    }
+}
+</script>
 
   <div class="full_presentation">
     <div class="carre_presentation">
-      <div class="center-content_presentation">
-        PDF1  
-      </div>
-    </div>
-  </div>
+
+
 </body>
 </html>
+
+
+
+
 
