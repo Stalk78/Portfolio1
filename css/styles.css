@@ -374,6 +374,20 @@ body {
   .topnav {
     padding: 5px;
   }
+  
+  .cvpdf {
+    margin-top: 5% !important;
+    margin-left: 5% !important;
+    width: 90% !important; /* Ajustez la largeur pour rendre le conteneur plus petit */
+    height: 80vh !important; /* Définir une hauteur spécifique en unités de hauteur de fenêtre */
+    max-height: 80vh !important; /* Assurer que la hauteur maximale est respectée */
+    -webkit-box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+    -moz-box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+    box-shadow: 0px 0px 36px 0px rgba(227,232,231,0.42);
+    overflow: hidden;
+  }
+  
+  
 
   .carre {
     width: 90%;
@@ -388,9 +402,7 @@ body {
   }
 }
 
-
-
-.full, .full_presentation, .center-content, .center-content_presentation, .center-content_veille {
+.full, .center-content, .center-content_presentation, .center-content_veille {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -465,6 +477,41 @@ margin-top: 1%;
   border-radius: 10px;
 }
 
+.carre_container {
+  font-size: 3vw;
+  height: auto; /* Ajustez la hauteur automatiquement */
+  text-align: left; /* Aligner le texte à gauche */
+  margin-bottom: 1em; /* Ajouter un espace en bas si nécessaire */
+}
+
+.sous_container {
+  margin-top: 17% !important;
+  height: auto; /* Ajustez la hauteur automatiquement */
+  text-align: left; /* Aligner le texte à gauche */
+}
+
+.full_presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #22505200;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.sous_container {
+  margin-top: 17% !important;
+  height: auto; /* Ajustez la hauteur automatiquement */
+  text-align: left; /* Aligner le texte à gauche */
+  width: 100%; /* Assurer que le conteneur prend toute la largeur */
+}
+
+
 .v2 {
   height: 67%;
   left: 10%;
@@ -484,6 +531,7 @@ margin-top: 1%;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 16px;
+  text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
