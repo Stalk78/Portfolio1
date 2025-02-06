@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet E5 - Kelvin Dosso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+            color: white;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p a {
+            color: white;
+            background: #ff9800;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        header p a:hover {
+            transform: scale(1.1);
+            background: #ffc107;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .docs-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .doc-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .doc-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .doc-btn {
+            color: white;
+            background: #ff9800;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .doc-btn:hover {
+            background: #ffc107;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #bbb;
+        }
+
+        footer a {
+            color: white;
+            background: #ff9800;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        footer a:hover {
+            transform: scale(1.1);
+            background: #ffc107;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Projet E5 - Kelvin Dosso</h1>
+        <p><a href="index.html">Retour à l'accueil</a></p>
+    </header>
+
+    <div class="content">
+        <h2>Description</h2>
+        <p>Dans la situation professionnelle présentée dans le cahier des charges de la <strong>KLLT Bank</strong>, ma mission est de mettre en place un contrôleur de domaine sous <strong>Windows Server 2022</strong>.</p>
+        <ul>
+            <li>Configurer <strong>Active Directory (AD DS)</strong>.</li>
+            <li>Mettre en place le serveur <strong>DNS</strong>.</li>
+            <li>Configurer <strong>DHCP</strong>.</li>
+            <li>Créer un partage <strong>SMB</strong>.</li>
+        </ul>
+
+        <div class="documentation">
+            <h2>Documentation</h2>
+            <div class="docs-container">
+                <div class="doc-card">
+                    <h3>Document utilisateur</h3>
+                    <p>Description du premier document.</p>
+                    <a href="pdf/Document Utilisateur KD.pdf" class="doc-btn" target="_blank">Voir le PDF</a>
+                </div>
+                <div class="doc-card">
+                    <h3>Fiche technique</h3>
+                    <p>Description du deuxième document.</p>
+                    <a href="/pdf/Fiche technique KD.pdf" class="doc-btn" target="_blank">Voir le PDF</a>
+                </div>
+                <div class="doc-card">
+                    <h3>Rapport de test</h3>
+                    <p>Description du troisième document.</p>
+                    <a href="/pdf/Rapport de test KD.pdf" class="doc-btn" target="_blank">Voir le PDF</a>
+                </div>
+                <div class="doc-card">
+                    <h3>Fiche descriptive</h3>
+                    <p>Description du quatrième document.</p>
+                    <a href="document4.pdf" class="doc-btn" target="_blank">Voir le PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Kelvin Dosso. <a href="index.html">Retour au portfolio</a>
+    </footer>
+</body>
+
+</html>
