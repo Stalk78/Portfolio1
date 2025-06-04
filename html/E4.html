@@ -41,17 +41,22 @@
    
     
 
-    .certif-button {
-      background-color: transparent;
-      border: 1px solid white;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
+ .certif-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 
+  white-space: normal;        /* Permet le retour à la ligne */
+  word-wrap: break-word;      /* Coupe le mot si trop long */
+  width: 100%;                /* Prend toute la largeur de la carte */
+  height: auto;               /* S'ajuste à la hauteur du texte */
+  box-sizing: border-box;     /* Inclut le padding dans la largeur */
+}
     .certif-button:hover {
       background-color: #444;
     }
@@ -91,14 +96,14 @@
       <div class="certif-card">
         <a href="/pdf/E4_Forti.pdf">
             <!--Image-->
-          <button class="certif-button">Configuration d'un Pare-feu Fortinet</button>
+          <button class="certif-button">Configuration de deux Pare-feux Fortinet (VPN/WAN/LAN/DMZ/Regles/Routes) </button>
         </a>
       </div>
 
       <div class="certif-card">
         <a href="/pdf/E4 Docker.pdf">
             <!--Image-->
-          <button class="certif-button">Configuration d'un serveur Web docker</button>
+          <button class="certif-button">Configuration d'un serveur Web docker hébergé en local</button>
         </a>
       </div>
 
@@ -107,14 +112,14 @@
       <div class="certif-card">
         <a href="/pdf/E4_Backdoor.pdf">
             <!--Image-->
-          <button class="certif-button">Création d'une backdoor et infection par clé USB</button>
+          <button class="certif-button">Mise en place d'une backdoor, injection et les façons de s'en protéger</button>
         </a>
       </div>
 
       <div class="certif-card">
         <a href="/pdf/E4_CTF.pdf">
             <!--Image-->
-          <button class="certif-button">Démonstration CTF</button>
+          <button class="certif-button">Pentest fictif (CTF)</button>
         </a>
       </div>
 
