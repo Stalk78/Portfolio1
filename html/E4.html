@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon PortFolio</title>
-  <link rel="stylesheet" href="/css/styles.css"> <!-- On conserve ton CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
-    /* STYLE APPLIQUÉ UNIQUEMENT À LA SECTION DES CERTIFS */
+
     body.presentation-page {
       background-color: #000000;
       color: white;
-      
     }
 
+    /* SECTION CENTRÉE PARFAITEMENT */
     .full_presentation {
+      min-height: calc(100vh - 80px); /* hauteur page - navbar */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,117 +25,113 @@
 
     .certifs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       width: 100%;
-      max-width: 1000px;
+      max-width: 1100px;
     }
 
     .certif-card {
-      background-color: #2c2c2c;
-      border: 1px solid #555;
+      background-color: #1e1e1e;
+      border: 1px solid #444;
       border-radius: 12px;
-      padding: 30px 15px;
+      padding: 25px 20px;
       text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: 0.2s;
     }
 
-   
-    
+    .certif-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 10px #666;
+    }
 
- .certif-button {
-  background-color: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+    .certif-button {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      white-space: normal;
+    }
 
-  white-space: normal;        /* Permet le retour à la ligne */
-  word-wrap: break-word;      /* Coupe le mot si trop long */
-  width: 100%;                /* Prend toute la largeur de la carte */
-  height: auto;               /* S'ajuste à la hauteur du texte */
-  box-sizing: border-box;     /* Inclut le padding dans la largeur */
-}
     .certif-button:hover {
       background-color: #444;
     }
+
   </style>
 </head>
+
 <body class="presentation-page">
 
     <div class="topnav">
         <a class="active" href="/index.html">Léo LE CORRE</a>
         <a class="onglet" href="https://quickconnect.to/Userleo">NAS</a>
-        <a class="onglet" href="https://tryhackme.com/p/Stalk78">THM</a>
-        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a> <!-- Hamburger icon -->
+        <a class="onglet" href="https://tryhackme.com/p/leolecorre">THM</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
         <div class="topnav-right" id="myTopnav">
-           <!--  <a class="onglet" href="/html/Presentation.html">Présentation</a>  -->
             <a class="onglet" href="/html/CV.html">CV</a>
             <a class="onglet" href="/html/Competences.html">Compétences</a>
             <a class="onglet" href="/pdf/Veille TechnoV3.pdf">Veille_Technologique</a>
-<a class="onglet" href="/html/E4.html">E5</a>
+            <a class="onglet" href="/html/E4.html">E5</a>
             <a class="onglet" href="/html/E5.html">E6</a>
             <a class="onglet" href="/html/Certifs.html">Certifs</a>
-            <div class="dropdown-menu">
-                <a href="javascript:void(0);" class="dropbtn">More ▼</a>
-                <div class="dropdown-content">
-                    <a href="#">About</a>
-                    <a href="#">Projects</a>
-                    <a href="#">Skills</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contact</a>
-                    <a href="#" class="highlight">Music Access</a>
-                </div>
-            </div>
         </div>
     </div>
 
-  <!-- CONTENU CERTIFICATIONS -->
-  <div class="full_presentation">
-    <div class="certifs-grid">
 
-      <div class="certif-card">
-        <a href="/pdf/E4_Forti.pdf">
-            <!--Image-->
-          <button class="certif-button">Configuration de deux Pare-feux Fortinet (VPN/WAN/LAN/DMZ/Regles/Routes) </button>
-        </a>
+    <div class="full_presentation">
+      <div class="certifs-grid">
+
+        <div class="certif-card">
+          <a href="/pdf/E4_Forti.pdf">
+            <button class="certif-button">Configuration de deux Pare-feux Fortinet (VPN/WAN/LAN/DMZ/Regles/Routes)</button>
+          </a>
+        </div>
+
+        <div class="certif-card">
+          <a href="/pdf/E4 Docker.pdf">
+            <button class="certif-button">Configuration d'un serveur Web Docker hébergé en local</button>
+          </a>
+        </div>
+
+        <div class="certif-card">
+          <a href="/pdf/E4_Backdoor.pdf">
+            <button class="certif-button">Mise en place d'une backdoor, injection et protections</button>
+          </a>
+        </div>
+
+        <div class="certif-card">
+          <a href="/pdf/E4_CTF.pdf">
+            <button class="certif-button">Pentest fictif (CTF)</button>
+          </a>
+        </div>
+
+        <div class="certif-card">
+          <button class="certif-button">///Honeypot Pi///</button>
+        </div>
+
+        <div class="certif-card">
+          <button class="certif-button">///Mise en place campagne phishing///</button>
+        </div>
+
+        <div class="certif-card">
+          <button class="certif-button">///Centreon///</button>
+        </div>
+
+        <div class="certif-card">
+          <button class="certif-button">///WDS///</button>
+        </div>
+
+        <div class="certif-card">
+          <button class="certif-button">///Furtivité en ligne///</button>
+        </div>
+
       </div>
-
-      <div class="certif-card">
-        <a href="/pdf/E4 Docker.pdf">
-            <!--Image-->
-          <button class="certif-button">Configuration d'un serveur Web docker hébergé en local</button>
-        </a>
-      </div>
-
-
-
-      <div class="certif-card">
-        <a href="/pdf/E4_Backdoor.pdf">
-            <!--Image-->
-          <button class="certif-button">Mise en place d'une backdoor, injection et les façons de s'en protéger</button>
-        </a>
-      </div>
-
-      <div class="certif-card">
-        <a href="/pdf/E4_CTF.pdf">
-            <!--Image-->
-          <button class="certif-button">Pentest fictif (CTF)</button>
-        </a>
-      </div>
-
-
     </div>
-  </div>
 
-
-
-
-
-
-
-
-
+</body>
+</html>
